@@ -21,7 +21,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
   };
 
   return (
-    <div className=" font-en h-screen w-screen bg-white dark:bg-black dark:text-white">
+    <div className=" font-en h-screen w-screen bg-white ">
       <Head>
         <title>{title}</title>
       </Head>
