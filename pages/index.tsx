@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { Layout } from "../components/Layout";
-import { Feaching } from "./Feaching";
+import Feaching from "./Feaching";
 
 const Home: NextPage = () => (
   <Layout title="Home">

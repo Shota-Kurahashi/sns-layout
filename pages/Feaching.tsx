@@ -62,4 +62,4 @@ const Feaching = () => {
   );
 };
 
-export { Feaching };
+export default Feaching;
