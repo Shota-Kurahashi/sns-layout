@@ -1,12 +1,10 @@
 import React from "react";
 import { Layout } from "../components/Layout";
 
-const Request = () => {
-  return (
-    <Layout title="Request">
-      <div></div>
-    </Layout>
-  );
-};
+const Request = () => (
+  <Layout title="Request">
+    <div />
+  </Layout>
+);
 
 export default Request;

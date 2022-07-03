@@ -1,18 +1,18 @@
 import axios from "axios";
-import { useMutation, useQuery, useQueryClient } from "react-query";
 import { useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "react-query";
 
-function Feaching() {
+const Feaching = () => {
   const [inputText, setInputText] = useState("");
   const queryClient = useQueryClient();
 
   const mutation = useMutation(
-    async (inputText: string) => {
-      return await axios.post("https://jsonplaceholder.typicode.com/posts", {
+    async (text: string) =>
+      // eslint-disable-next-line no-return-await
+      await axios.post("https://jsonplaceholder.typicode.com/posts", {
         id: "102",
-        title: inputText,
-      });
-    },
+        title: text,
+      }),
     {
       onSuccess: (result) => {
         const previousResult = queryClient.getQueryData<any>("posts");
@@ -26,7 +26,7 @@ function Feaching() {
     }
   );
 
-  const { data, isLoading, isError } = useQuery("posts", async function () {
+  const { data, isLoading, isError } = useQuery("posts", async () => {
     const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
 
     return res.data;
@@ -49,17 +49,17 @@ function Feaching() {
       />
       <ul>
         {data &&
-          data.map((post: any) => {
-            return (
-              <li key={post.id}>
-                {post.id}:{post.title}
-              </li>
-            );
-          })}
+          data.map((post: any) => (
+            <li key={post.id}>
+              {post.id}:{post.title}
+            </li>
+          ))}
       </ul>
-      <button onClick={() => mutation.mutate(inputText)}>click</button>
+      <button type="button" onClick={() => mutation.mutate(inputText)}>
+        click
+      </button>
     </div>
   );
-}
+};
 
 export { Feaching };

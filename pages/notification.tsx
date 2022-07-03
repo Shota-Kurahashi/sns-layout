@@ -10,13 +10,11 @@ const Notification = () => {
     <Layout title="Notification">
       <ul>
         {previousResult &&
-          previousResult.map((post: any) => {
-            return (
-              <li key={post.id}>
-                {post.id}:{post.title}
-              </li>
-            );
-          })}
+          previousResult.map((post: any) => (
+            <li key={post.id}>
+              {post.id}:{post.title}
+            </li>
+          ))}
       </ul>
     </Layout>
   );

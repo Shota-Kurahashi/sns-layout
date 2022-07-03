@@ -6,13 +6,11 @@ import "../styles/hidescroll.css";
 
 const queryClient = new QueryClient();
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-      <ReactQueryDevtools />
-    </QueryClientProvider>
-  );
-}
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <QueryClientProvider client={queryClient}>
+    <Component {...pageProps} />
+    <ReactQueryDevtools />
+  </QueryClientProvider>
+);
 
 export default MyApp;
