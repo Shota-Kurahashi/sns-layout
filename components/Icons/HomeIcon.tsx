@@ -6,7 +6,7 @@ export const HomeIcon = () => {
       height="48"
       viewBox="0 0 48 48"
       fill="none"
-      className={`z-0 h-16 w-16 group-hover:animate-shake`}
+      className={`group-hover:animate-shake z-0 h-16 w-16`}
     >
       <rect width="48" height="48" fill="none" />
       <path
