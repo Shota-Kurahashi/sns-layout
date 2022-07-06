@@ -21,7 +21,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
   };
 
   return (
-    <div className=" font-en h-screen w-screen bg-white ">
+    <div className=" h-screen w-screen bg-white font-en ">
       <Head>
         <title>{title}</title>
       </Head>
@@ -56,7 +56,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
         </button>
         <h1 className="font-ja text-xl font-bold">なんだろう</h1>
         <div className="absolute right-0 flex h-16 w-[5rem] cursor-pointer items-center justify-center">
-          <div className="relative flex h-12 w-12 rounded-full bg-red-500">
+          <div className="relative flex h-12 w-12 rounded-full ">
             <img
               className="	h-full w-full rounded-full object-cover"
               src="https://api.lorem.space/image/face?hash=92310"
@@ -70,9 +70,8 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
       </header>
       <motion.aside
         layout
-        className={`fixed left-0 z-10  h-full w-24  flex-col  overflow-scroll border-r pt-[5.5rem]  ${
-          isOpenSide && "w-3/4"
-        }`}
+        animate={isOpenSide ? { width: "75%" } : { width: "6rem" }}
+        className="fixed z-10  h-full flex-col overflow-scroll  border-r bg-blue-500 bg-white pt-[5.5rem] "
         transition={spring}
       >
         <Link href="/">
@@ -134,12 +133,14 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
         </Link>
       </motion.aside>
       <motion.main
-        layout
+        animate={
+          isOpenSide
+            ? { x: "75%", marginLeft: "0" }
+            : { x: "0%", marginLeft: "6rem" }
+        }
         transition={spring}
         onClick={() => setIsOpenSide(false)}
-        className={` ${
-          isOpenSide && "left-3/4 ml-0"
-        } relative left-0 ml-24 flex flex-col justify-center bg-white px-4 pt-[5.5rem]`}
+        className="flex flex-col  justify-center bg-red-500 bg-white px-4 pt-[5.5rem]"
       >
         {children}
       </motion.main>
