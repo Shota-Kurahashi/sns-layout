@@ -71,13 +71,13 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
       <motion.aside
         layout
         animate={isOpenSide ? { width: "75%" } : { width: "6rem" }}
-        className="fixed z-10  h-full flex-col overflow-scroll  border-r bg-blue-500 bg-white pt-[5.5rem] "
+        className="0 fixed  z-10 h-full flex-col  overflow-scroll border-r bg-white pt-[5.5rem] "
         transition={spring}
       >
         <Link href="/">
           <motion.div
             layout
-            className=" min-h-16 group relative flex h-24 w-24 cursor-pointer items-center justify-center"
+            className="min-h-16 group relative flex h-24 w-24 cursor-pointer items-center justify-center"
           >
             {pathName === "/" ? (
               <motion.div
@@ -140,7 +140,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
         }
         transition={spring}
         onClick={() => setIsOpenSide(false)}
-        className="flex flex-col  justify-center bg-red-500 bg-white px-4 pt-[5.5rem]"
+        className="flex flex-col  justify-center bg-white px-4 pt-[5.5rem]"
       >
         {children}
       </motion.main>
