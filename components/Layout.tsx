@@ -16,8 +16,8 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
 
   const spring = {
     type: "spring",
-    bounce: 0.6,
-    duration: 0.8,
+    bounce: 0.3,
+    duration: 0.5,
   };
 
   return (
@@ -70,7 +70,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
       </header>
       <motion.aside
         layout
-        className={`fixed left-0 z-10  w-24  flex-col  overflow-scroll border-r pt-[5.5rem]  ${
+        className={`fixed left-0 z-10  h-full w-24  flex-col  overflow-scroll border-r pt-[5.5rem]  ${
           isOpenSide && "w-3/4"
         }`}
         transition={spring}
