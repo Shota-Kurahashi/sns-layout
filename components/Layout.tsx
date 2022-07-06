@@ -17,7 +17,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
   const spring = {
     type: "spring",
     bounce: 0.3,
-    duration: 0.5,
+    duration: 0.3,
   };
 
   return (
@@ -32,7 +32,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
         <button
           type="button"
           onClick={() => setIsOpenSide(!isOpenSide)}
-          className="absolute left-0 flex h-16 w-24  cursor-pointer items-center justify-center  overflow-hidden bg-white"
+          className="absolute left-0 flex h-16 w-24 cursor-pointer  items-center justify-center overflow-hidden  bg-white"
         >
           <span
             className={`absolute left-[12px] h-1  cursor-pointer rounded bg-black duration-[0.2s] ${
@@ -133,6 +133,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
         </Link>
       </motion.aside>
       <motion.main
+        layout
         animate={
           isOpenSide
             ? { x: "75%", marginLeft: "0" }

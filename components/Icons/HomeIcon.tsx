@@ -1,11 +1,8 @@
 export const HomeIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
     viewBox="0 0 48 48"
-    fill="none"
-    className="group-hover:animate-shake z-0 h-16 w-16"
+    className="z-0 h-14 w-14 fill-transparent group-hover:animate-shake"
   >
     <rect width="48" height="48" fill="none" />
     <path
