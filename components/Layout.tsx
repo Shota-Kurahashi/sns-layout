@@ -82,7 +82,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
             {pathName === "/" ? (
               <motion.div
                 layoutId="IconBackground"
-                className="absolute h-20 w-20 rounded-full bg-[#ffcc00] "
+                className="absolute h-20 w-20 rounded-full bg-[#febc2e] "
               />
             ) : null}
 
@@ -97,7 +97,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
             {pathName === "/user" ? (
               <motion.div
                 layoutId="IconBackground"
-                className="absolute h-20 w-20 rounded-full bg-[#ffcc00] "
+                className="absolute h-20 w-20 rounded-full bg-[#febc2e] "
               />
             ) : null}
             <UserIcon />
@@ -111,7 +111,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
             {pathName === "/notification" ? (
               <motion.div
                 layoutId="IconBackground"
-                className="absolute h-20 w-20 rounded-full bg-[#ffcc00]"
+                className="absolute h-20 w-20 rounded-full bg-[#febc2e]"
               />
             ) : null}
             <BellIcon />
@@ -125,7 +125,7 @@ export const Layout: FC<Title> = ({ children, title = "Title" }) => {
             {pathName === "/usage" ? (
               <motion.div
                 layoutId="IconBackground"
-                className="absolute h-20 w-20 rounded-full bg-[#ffcc00] "
+                className="absolute h-20 w-20 rounded-full bg-[#febc2e] "
               />
             ) : null}
             <CommentBoxIcon />
